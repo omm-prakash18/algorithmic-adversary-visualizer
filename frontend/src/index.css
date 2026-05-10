@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #070B14;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.font-mono {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Professional Multi-Layered Glow Effects */
+.glow-blue {
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 
+              0 0 20px rgba(59, 130, 246, 0.3), 
+              0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.glow-red {
+  box-shadow: 0 0 5px rgba(239, 68, 68, 0.5), 
+              0 0 20px rgba(239, 68, 68, 0.3), 
+              0 0 40px rgba(239, 68, 68, 0.1);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 5px rgba(16, 185, 129, 0.5), 
+              0 0 20px rgba(16, 185, 129, 0.3), 
+              0 0 40px rgba(16, 185, 129, 0.1);
+}
+
+/* Premium Glassmorphism Panels */
+.glass-panel {
+  background: rgba(15, 20, 35, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Faded Background Grid (Vignette) */
+.vignette-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Custom Scrollbar for a more professional look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+/* React Flow Overrides */
+.react-flow__pane {
+  cursor: crosshair !important;
+}
+
+.react-flow__handle {
+  width: 4px !important;
+  height: 4px !important;
+  background: rgba(59, 130, 246, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.react-flow__edge-path {
+  stroke-dasharray: 5;
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  from { stroke-dashoffset: 500; }
+  to { stroke-dashoffset: 0; }
+}
