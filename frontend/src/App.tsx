@@ -144,7 +144,7 @@ function App() {
             <Zap size={24} className="text-white fill-white" />
           </motion.div>
           <div>
-            <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-3 text-white">
+            <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-3">
               ADVERSARY <span className="bg-blue-600/20 text-blue-500 px-2 py-0.5 rounded-md text-[10px] font-mono border border-blue-500/20 uppercase tracking-widest">v4.0-CORE</span>
             </h1>
             <div className="flex items-center gap-2 mt-1">

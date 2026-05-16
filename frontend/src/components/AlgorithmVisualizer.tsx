@@ -33,6 +33,11 @@ const AlgorithmVisualizer: React.FC<Props> = ({ steps }) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [isBooting, setIsBooting] = useState(false);
 
+  const isLinkedList = React.useMemo(() => 
+    steps?.some(s => s.action === 'link'), 
+    [steps]
+  );
+
   useEffect(() => {
     if (steps && steps.length > 0) {
        setIsBooting(true);
@@ -84,7 +89,6 @@ const AlgorithmVisualizer: React.FC<Props> = ({ steps }) => {
       case 'create_node':
         if (step.node) {
           setNodes(nds => {
-            const isLinkedList = steps.some(s => s.action === 'link');
             const newPos = isLinkedList 
               ? { x: 80 + nds.length * 140, y: 150 }
               : { x: 350, y: 60 };
